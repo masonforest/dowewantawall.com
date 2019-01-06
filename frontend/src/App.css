@@ -1,0 +1,77 @@
+html, body{
+  height:100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+  text-align: center;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  margin: 0;
+}
+
+@keyframes animatedBackground {
+  from { background-position: left 120% bottom 20px, left bottom, left bottom; }
+  to { background-position: left -22% bottom 20px, left bottom, left bottom; }
+}
+
+body {
+    margin: 0;
+    background-size: auto, 20px 70%, cover;
+    /* background-position: left bottom; */
+    /* background-position: -2% bottom,left bottom, left bottom; */
+    background-image: url('car.png'), url("background.svg"), linear-gradient(#CBE9F2, #fff);
+    background-repeat: no-repeat, repeat-x;
+    animation: animatedBackground 20s linear infinite;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+  font-size: 88px;
+  font-weight: bold;
+}
+
+.no {
+  color: #EF3337;
+}
+
+.yes {
+  color: #2CAC74;
+}
+
+section {
+  max-width: 520px;
+  background-color: #fff;
+  padding: 10px 20px;
+  margin: 15px auto;
+  border-radius: 30px;
+  box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.07);
+  transform: 0.5s ease, box-shadow 0.5s ease;
+}
+.vote-button {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.vote-button.yes{
+  background-color: #2CAC74;
+}
+.vote-button.no{
+  background-color: #EF3337;
+}
+.warning {
+  font-size: 10px;
+  color: #aaa;
+}
+h1 {
+  text-align: center;
+}
