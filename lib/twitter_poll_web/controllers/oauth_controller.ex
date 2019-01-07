@@ -1,4 +1,5 @@
 defmodule TwitterPollWeb.OauthController do
+  require Logger
   alias TwitterPoll.Repo
   alias TwitterPoll.User
   use TwitterPollWeb, :controller
@@ -51,7 +52,8 @@ defmodule TwitterPollWeb.OauthController do
   end
 
   def authentication_url(conn, %{"state" => state}) do
-    token = ExTwitter.request_token("http://localhost:3000/oauth/callback?state=#{state}")
+    origin = Enum.at(Application.get_env(:cors_plug, :origin), 0)
+    token = ExTwitter.request_token("#{origin}/oauth/callback?state=#{state}")
     {:ok, authentication_url} = ExTwitter.authenticate_url(token.oauth_token)
 
     json conn, authentication_url

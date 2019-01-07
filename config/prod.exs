@@ -23,6 +23,11 @@ config :twitter_poll, TwitterPoll.Repo,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
+config :extwitter, :oauth,
+  consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
+  consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET"),
+  access_token: "",
+  access_token_secret: ""
 config :cors_plug,
   origin: [System.get_env("CORS_ORIGIN")],
   max_age: 86400,

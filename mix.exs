@@ -33,7 +33,7 @@ defmodule TwitterPoll.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:cors_plug, path: "./cors_plug"},
+      {:cors_plug, "~> 2.0"},
       {:phoenix, "~> 1.4.0"},
       {:phoenix_ecto, "~> 3.2"},
       {:phoenix_html, "~> 2.10"},

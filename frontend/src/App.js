@@ -92,6 +92,7 @@ class App extends Component {
             }
             <div>{yesPercentage}% of Twitter users who voted say <span className="yes">Yes</span></div>
             <div>{noPercentage}% of Twitter users who voted say <span className="no">No</span></div>
+            <div>{totalVoteCount} votes total</div>
             <div className="warning"><i>WARNING: George Soros and the Dems are funding people and bots to vote "No". This poll is FAKE NEWS! </i>😉</div>
         </section>
         <section>
