@@ -7,7 +7,7 @@
 /coverage
 
 # production
-/build
+_build
 /deps
 
 # misc
