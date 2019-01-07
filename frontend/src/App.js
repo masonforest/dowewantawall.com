@@ -81,7 +81,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <header>
-          <h1>Should the United States build a wall on it&apos;s Southern border between itself and Mexico?</h1>
+          <h1>Should the United States build a wall on its Southern border between itself and Mexico?</h1>
         </header>
         <section>
             <h2>Twitter Says:</h2>
