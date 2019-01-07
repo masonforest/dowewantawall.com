@@ -6,7 +6,7 @@ import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
 import logo from './logo.svg';
 import './App.css';
 library.add(faThumbsDown, faThumbsUp);
-const API_URL = "http://localhost:4000"
+const API_URL = process.env.REACT_APP_API_URL;
 
 class App extends Component {
   constructor () {

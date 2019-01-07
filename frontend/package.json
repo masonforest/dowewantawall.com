@@ -1,5 +1,5 @@
 {
-  "name": "trumporbeto.com",
+  "name": "do-we-want-a-wall.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,8 @@
     "npm": "^6.5.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "growl": ">=1.10.0"
   },
   "scripts": {
     "start": "react-scripts start",
