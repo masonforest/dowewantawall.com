@@ -100,11 +100,13 @@ class App extends Component {
             <FontAwesomeIcon onClick={() => this.signInAndVote(false)} icon="thumbs-down" className="vote-button no" />
             <FontAwesomeIcon onClick={() => this.signInAndVote(true)} icon="thumbs-up"  className="vote-button yes" />
         </section>
+        {/*
         <section>
           <h2>Secured by the Blockchain</h2>
 
           <p>All votes will be recorded on the <a href="https://ethereum.org/">Ethereum</a> blockchain. Once cast votes can not be changed or censored by any person govronment or entity not even the programmer who built the application.</p>
         </section>
+        */}
       </React.Fragment>
     );
   }
