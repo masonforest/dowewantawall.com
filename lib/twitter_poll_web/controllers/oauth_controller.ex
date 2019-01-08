@@ -40,7 +40,10 @@ defmodule TwitterPollWeb.OauthController do
 
     case result do
       {:ok, user} ->
-        IO.inspect user
+        Logger.info "Logging in User ID: #{Map.fetch!(user, :id)}"
+        user = user
+          |> Repo.preload(:vote)
+
         conn
           |> put_session(:user_id, Map.fetch!(user, :id))
           |> json(user)
