@@ -100,13 +100,14 @@ class App extends Component {
             <FontAwesomeIcon onClick={() => this.signInAndVote(false)} icon="thumbs-down" className="vote-button no" />
             <FontAwesomeIcon onClick={() => this.signInAndVote(true)} icon="thumbs-up"  className="vote-button yes" />
         </section>
-        {/*
         <section>
           <h2>Secured by the Blockchain</h2>
 
           <p>All votes will be recorded on the <a href="https://ethereum.org/">Ethereum</a> blockchain. Once cast votes can not be changed or censored by any person govronment or entity not even the programmer who built the application.</p>
+      <div><strong>Contract Address:</strong> <a href="https://etherscan.io/address/0x5843cc6cd40bd45079b72b991a06dfa6ff69a286#readContract">0x5843cc6cd40bd45079b72b991a06dfa6ff69a286</a></div>
+      <div><strong>Donation Address:</strong> <a href="https://etherscan.io/address/0x271d0B235C01E352e8a7788769D778b2706bc613">0x271d0B235C01E352e8a7788769D778b2706bc613</a></div>
+      
         </section>
-        */}
       </React.Fragment>
     );
   }
