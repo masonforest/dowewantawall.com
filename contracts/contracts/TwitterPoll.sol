@@ -1,27 +1,28 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.5.0;
 pragma experimental ABIEncoderV2;
 import "./utils/ConcatLib.sol";
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
 contract TwitterPoll is Ownable {
-  using ConcatLib for bytes15[];
+  using ConcatLib for string[];
   string public question;
-  string public optionA;
-  string public optionB;
-  bytes15[][2] public votes;
+  string[] public yesVotes;
+  string[] public noVotes;
 
-  constructor(string _question, string _optionA, string _optionB) public {
+  constructor(string memory _question) public {
     question = _question;
-    optionA = _optionA;
-    optionB = _optionB;
   }
 
-  function submitVotes(bytes15[] _votesForOptionA, bytes15[] _votesForOptionB) public {
-    votes[0].concat(_votesForOptionA);
-    votes[1].concat(_votesForOptionB);
+  function submitVotes(string[] memory _yesVotes, string[] memory _noVotes) public onlyOwner() {
+    yesVotes.concat(_yesVotes);
+    noVotes.concat(_noVotes);
   }
 
-  function voteCount(uint option) public view returns (uint){
-    return votes[option].length;
+  function getYesVotes() public view returns (string[] memory){
+    return yesVotes;
+  }
+
+  function getNoVotes() public view returns (string[] memory){
+    return noVotes;
   }
 }
