@@ -12,7 +12,7 @@ defmodule TwitterPollWeb.Router do
     # Use the default browser stack
     pipe_through(:api)
 
-    resources "/user", UserController, only: [:show]
+    get "/user", UserController, :show
     resources "/votes", VotesController, only: [:create, :index]
     get("/", PageController, :index)
     post("/oauth/callback", OauthController, :callback)

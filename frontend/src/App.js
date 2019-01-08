@@ -12,6 +12,7 @@ class App extends Component {
   constructor () {
     super();
     this.state = {
+      user: {},
       vote: null,
       yesVoteCount: null,
       noVoteCount: null,
@@ -28,8 +29,21 @@ class App extends Component {
       await this.vote(vote);
       window.location.href = "/";
     } else {
+      this.getUser();
       this.getVotes();
     }
+  }
+
+  getUser = async () => {
+    const response = await fetch(`${API_URL}/user`, {
+      credentials: "include",
+    });
+    const user = await response.json();
+
+    this.setState({
+      ...this.state,
+      user: user,
+    })
   }
 
   getVotes = async () => {
@@ -73,7 +87,7 @@ class App extends Component {
   }
 
   render() {
-    const {yesVoteCount, noVoteCount} = this.state;
+    const {yesVoteCount, noVoteCount, user} = this.state;
     const totalVoteCount = yesVoteCount + noVoteCount;
     const yesPercentage = Math.round((yesVoteCount/totalVoteCount) * 100);
     const noPercentage = Math.round((noVoteCount/totalVoteCount) * 100);
@@ -83,6 +97,7 @@ class App extends Component {
         <header>
           <h1>Should the United States build a wall on its Southern border between itself and Mexico?</h1>
         </header>
+        {totalVoteCount > 0 ?
         <section>
             <h2>Twitter Says:</h2>
             {answer ? 
@@ -92,21 +107,28 @@ class App extends Component {
             }
             <div>{yesPercentage}% of Twitter users who voted say <span className="yes">Yes</span></div>
             <div>{noPercentage}% of Twitter users who voted say <span className="no">No</span></div>
+            {user.twitter_user_id ?
+              <div>You ({user.screen_name}) voted&nbsp;
+              { user.vote.choice ?
+                <span className="no">No</span> : 
+                <span className="no">No</span>
+              } </div>: null}
             <div>{totalVoteCount} votes total</div>
             <div className="warning"><i>WARNING: George Soros and the Dems are funding people and bots to vote "No". This poll is FAKE NEWS! </i>😉</div>
-        </section>
-        <section>
-            <h2>Vote</h2>
-            <FontAwesomeIcon onClick={() => this.signInAndVote(false)} icon="thumbs-down" className="vote-button no" />
-            <FontAwesomeIcon onClick={() => this.signInAndVote(true)} icon="thumbs-up"  className="vote-button yes" />
-        </section>
+        </section> : null}
+        {user.twitter_user_id ? null:
+          <section>
+              <h2>Vote</h2>
+              <FontAwesomeIcon onClick={() => this.signInAndVote(false)} icon="thumbs-down" className="vote-button no" />
+              <FontAwesomeIcon onClick={() => this.signInAndVote(true)} icon="thumbs-up"  className="vote-button yes" />
+          </section>
+        }
         <section>
           <h2>Secured by the Blockchain</h2>
 
-          <p>All votes will be recorded on the <a href="https://ethereum.org/">Ethereum</a> blockchain. Once votes are cast they can not be changed or censored by the website owner or any person govronment or entity.</p>
+          <p>All votes will be recorded on the <a href="https://ethereum.org/">Ethereum</a> blockchain. Once votes are cast they can not be changed or censored by the website owner or any person govronment or entity. Please allow 10 minutes for your vote to be saved to to blockchain.</p>
       <div><strong>Contract Address:</strong> <a href="https://etherscan.io/address/0x5843cc6cd40bd45079b72b991a06dfa6ff69a286#readContract">0x5843cc6cd40bd45079b72b991a06dfa6ff69a286</a></div>
       <div><strong>Donation Address:</strong> <a href="https://etherscan.io/address/0x271d0B235C01E352e8a7788769D778b2706bc613">0x271d0B235C01E352e8a7788769D778b2706bc613</a></div>
-      
         </section>
       </React.Fragment>
     );

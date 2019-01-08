@@ -3,9 +3,12 @@ defmodule TwitterPoll.Vote do
   import Ecto.Changeset
 
 
+  @derive {Poison.Encoder, only: [
+    :choice
+  ]}
   schema "votes" do
     field :choice, :boolean, default: false
-    field :user_id, :id
+    belongs_to :user, User
 
     timestamps()
   end
