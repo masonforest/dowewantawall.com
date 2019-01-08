@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import car from './car.png';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
-import logo from './logo.svg';
 import './App.css';
 library.add(faThumbsDown, faThumbsUp);
 const API_URL = process.env.REACT_APP_API_URL;
@@ -20,7 +18,7 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    if(window.location.pathname == "/oauth/callback") {
+    if(window.location.pathname === "/oauth/callback") {
       const urlParams = new URLSearchParams(window.location.search);
       const oauthToken = urlParams.get('oauth_token');
       const oauthVerifier = urlParams.get('oauth_verifier');
@@ -55,7 +53,7 @@ class App extends Component {
     })
   }
   oauthCallback = async (oauthToken, oauthVerifier) => {
-    const response = await fetch(`${API_URL}/oauth/callback`, {
+    await fetch(`${API_URL}/oauth/callback`, {
       method: "POST",
       headers: {
             "Content-Type": "application/json",
@@ -66,7 +64,6 @@ class App extends Component {
         "oauth_verifier": oauthVerifier,
       })
     });
-    const user = await response.json();
   }
 
   async vote(choice) {
@@ -114,7 +111,7 @@ class App extends Component {
                 <span className="no">No</span>
               } </div>: null}
             <div>{totalVoteCount} votes total</div>
-            <div className="warning"><i>WARNING: George Soros and the Dems are funding people and bots to vote "No". This poll is FAKE NEWS! </i>😉</div>
+            <div className="warning"><i>WARNING: George Soros and the Dems are funding people and bots to vote "No". This poll is FAKE NEWS! </i><span role="img" aria-label="wink">😉</span></div>
         </section> : null}
         {user && user.twitter_user_id ? null:
           <section>

@@ -18,10 +18,8 @@ h2 {
 
 body {
     margin: 0;
-    background-size: auto, 20px 70%, cover;
-    /* background-position: left bottom; */
-    /* background-position: -2% bottom,left bottom, left bottom; */
-    background-image: url('car.png'), url("background.svg"), linear-gradient(#CBE9F2, #fff);
+    background-size: 300px auto, 20px 70%, cover;
+    background-image: url("car.svg"), url("background.svg"), linear-gradient(#CBE9F2, #fff);
     background-repeat: no-repeat, repeat-x;
     animation: animatedBackground 20s linear infinite;
 }
