@@ -107,7 +107,7 @@ class App extends Component {
             }
             <div>{yesPercentage}% of Twitter users who voted say <span className="yes">Yes</span></div>
             <div>{noPercentage}% of Twitter users who voted say <span className="no">No</span></div>
-            {user.twitter_user_id ?
+            {user && user.twitter_user_id ?
               <div>You ({user.screen_name}) voted&nbsp;
               { user.vote.choice ?
                 <span className="no">No</span> : 
@@ -116,7 +116,7 @@ class App extends Component {
             <div>{totalVoteCount} votes total</div>
             <div className="warning"><i>WARNING: George Soros and the Dems are funding people and bots to vote "No". This poll is FAKE NEWS! </i>😉</div>
         </section> : null}
-        {user.twitter_user_id ? null:
+        {user && user.twitter_user_id ? null:
           <section>
               <h2>Vote</h2>
               <FontAwesomeIcon onClick={() => this.signInAndVote(false)} icon="thumbs-down" className="vote-button no" />
