@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
@@ -17,7 +16,7 @@
    style="enable-background:new 0 0 3312.7 1690.1;"
    xml:space="preserve"
    id="svg192"
-   sodipodi:docname="CAR- OBJECT-01.svg"
+   sodipodi:docname="car.svg"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"><metadata
      id="metadata198"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -31,19 +30,36 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="760"
-     inkscape:window-height="529"
+     inkscape:window-width="1143"
+     inkscape:window-height="676"
      id="namedview194"
      showgrid="false"
      inkscape:zoom="0.18"
-     inkscape:cx="872.75006"
-     inkscape:cy="845.04999"
+     inkscape:cx="1706.0834"
+     inkscape:cy="1067.2722"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="Layer_1" /><style
      type="text/css"
      id="style2">
+
+  #front_wheel {
+    animation:spin 1.5s linear infinite;
+    transform-origin: 659px 1236px;
+    transform: scaley(.9) rotate(360deg);
+  }
+  #back_wheel {
+    animation:spin 1.5s linear infinite;
+    transform-origin: 2425px 1240px;
+  }
+
+
+  @keyframes spin {
+    0% {transform: scaleX(.90) scaleY(1.05) rotate(360deg); }
+    100% {transform: scaleX(.90) scaleY(1.05) rotate(0); }
+  }
+
 	.st0{display:none;}
 	.st1{fill:#0F1820;}
 	.st2{fill:#5D616A;}
@@ -222,7 +238,8 @@
          class="st6"
          d="M410.5,793c-1-0.2-98.8-22.3-171,0l-1.7-5.7c73.7-22.7,173-0.3,174,0L410.5,793z"
          id="path151" /></g><g
-       id="g171"><polygon
+       id="front_wheel"
+       inkscape:label="#g171"><polygon
          class="st2"
          points="644.2,1094.7 619.5,1185 684.2,1185 660.3,1093.5   "
          id="polygon155" /><polygon
@@ -247,7 +264,8 @@
          cy="1239.6"
          r="71"
          id="circle169" /></g><g
-       id="g189"><polygon
+       id="back_wheel"
+       inkscape:label="#g189"><polygon
          class="st2"
          points="2417.6,1094.7 2392.9,1185 2457.6,1185 2433.8,1093.5   "
          id="polygon173" /><polygon
