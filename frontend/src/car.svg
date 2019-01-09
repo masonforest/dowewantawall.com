@@ -34,9 +34,9 @@
      inkscape:window-height="676"
      id="namedview194"
      showgrid="false"
-     inkscape:zoom="0.18"
-     inkscape:cx="1706.0834"
-     inkscape:cy="1067.2722"
+     inkscape:zoom="0.36"
+     inkscape:cx="1864.5471"
+     inkscape:cy="744.69109"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -45,19 +45,18 @@
      id="style2">
 
   #front_wheel {
-    animation:spin 1.5s linear infinite;
-    transform-origin: 659px 1236px;
-    transform: scaley(.9) rotate(360deg);
+    animation:spin 2s linear infinite;
+    transform-origin: 654px 1239px;
   }
   #back_wheel {
-    animation:spin 1.5s linear infinite;
-    transform-origin: 2425px 1240px;
+    animation:spin 2s linear infinite;
+    transform-origin: 2428px 1236px;
   }
 
 
   @keyframes spin {
-    0% {transform: scaleX(.90) scaleY(1.05) rotate(360deg); }
-    100% {transform: scaleX(.90) scaleY(1.05) rotate(0); }
+    0% {transform: scaleX(.9) rotate(360deg); }
+    100% {transform: scaleX(.9) rotate(0); }
   }
 
 	.st0{display:none;}
@@ -241,52 +240,66 @@
        id="front_wheel"
        inkscape:label="#g171"><polygon
          class="st2"
-         points="644.2,1094.7 619.5,1185 684.2,1185 660.3,1093.5   "
-         id="polygon155" /><polygon
+         points="684.2,1185 660.3,1093.5 644.2,1094.7 619.5,1185 "
+         id="polygon155"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="763.5,1161.3 675.2,1192.5 712.1,1245.7 773.6,1174   "
-         id="polygon157" /><polygon
+         points="712.1,1245.7 773.6,1174 763.5,1161.3 675.2,1192.5 "
+         id="polygon157"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="534.5,1156.1 622.7,1187.3 585.9,1240.5 524.3,1168.7   "
-         id="polygon159" /><polygon
+         points="585.9,1240.5 524.3,1168.7 534.5,1156.1 622.7,1187.3 "
+         id="polygon159"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="555.9,1337.7 599,1254.6 646.5,1298.5 567,1349.5   "
-         id="polygon161" /><polygon
+         points="646.5,1298.5 567,1349.5 555.9,1337.7 599,1254.6 "
+         id="polygon161"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="759.1,1337.7 716,1254.6 668.5,1298.5 748,1349.5   "
-         id="polygon163" /><g
-         id="g167"><path
-           class="st14"
-           d="M653.5,975.2c-130.3,0-236,118.4-236,264.4c0,146,105.6,264.4,236,264.4s236-118.4,236-264.4     C889.4,1093.6,783.8,975.2,653.5,975.2z M653.5,1378.8c-71.3,0-129.2-62.4-129.2-139.3c0-76.9,57.8-139.3,129.2-139.3     s129.2,62.4,129.2,139.3C782.6,1316.5,724.8,1378.8,653.5,1378.8z"
-           id="path165" /></g><circle
+         points="668.5,1298.5 748,1349.5 759.1,1337.7 716,1254.6 "
+         id="polygon163"
+         style="fill:#5d616a" /><g
+         id="g167" /><circle
          class="st15"
          cx="653.5"
          cy="1239.6"
          r="71"
-         id="circle169" /></g><g
+         id="circle169"
+         style="fill:#5d616a;stroke:#3e404d;stroke-width:2;stroke-miterlimit:10" /></g><g
        id="back_wheel"
        inkscape:label="#g189"><polygon
          class="st2"
-         points="2417.6,1094.7 2392.9,1185 2457.6,1185 2433.8,1093.5   "
-         id="polygon173" /><polygon
+         points="2417.6,1094.7 2392.9,1185 2457.6,1185 2433.8,1093.5 "
+         id="polygon173"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="2536.9,1161.3 2448.7,1192.5 2485.5,1245.7 2547.1,1174   "
-         id="polygon175" /><polygon
+         points="2536.9,1161.3 2448.7,1192.5 2485.5,1245.7 2547.1,1174 "
+         id="polygon175"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="2307.9,1156.1 2396.2,1187.3 2359.3,1240.5 2297.8,1168.7   "
-         id="polygon177" /><polygon
+         points="2307.9,1156.1 2396.2,1187.3 2359.3,1240.5 2297.8,1168.7 "
+         id="polygon177"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="2329.3,1337.7 2372.4,1254.6 2420,1298.5 2340.4,1349.5   "
-         id="polygon179" /><polygon
+         points="2329.3,1337.7 2372.4,1254.6 2420,1298.5 2340.4,1349.5 "
+         id="polygon179"
+         style="fill:#5d616a" /><polygon
          class="st2"
-         points="2532.6,1337.7 2489.5,1254.6 2441.9,1298.5 2521.5,1349.5   "
-         id="polygon181" /><g
-         id="g185"><path
-           class="st14"
-           d="M2426.9,975.2c-130.3,0-236,118.4-236,264.4c0,146,105.6,264.4,236,264.4s236-118.4,236-264.4     C2662.9,1093.6,2557.3,975.2,2426.9,975.2z M2426.9,1378.8c-71.3,0-129.2-62.4-129.2-139.3c0-76.9,57.8-139.3,129.2-139.3     s129.2,62.4,129.2,139.3C2556.1,1316.5,2498.3,1378.8,2426.9,1378.8z"
-           id="path183" /></g><circle
+         points="2532.6,1337.7 2489.5,1254.6 2441.9,1298.5 2521.5,1349.5 "
+         id="polygon181"
+         style="fill:#5d616a" /><g
+         id="g185" /><circle
          class="st15"
-         cx="2426.9"
+         cx="2426.8999"
          cy="1239.6"
          r="71"
-         id="circle187" /></g></g></svg>
+         id="circle187"
+         style="fill:#5d616a;stroke:#3e404d;stroke-width:2;stroke-miterlimit:10" /></g><path
+       style="fill:#3e404d;fill-opacity:1;stroke-width:4"
+       d="m 656.3,983.7264 a 250,250 0 0 0 -250,250 250,250 0 0 0 250,250 250,250 0 0 0 250,-250 250,250 0 0 0 -250,-250 z m 0,127.7736 A 122.22222,122.22222 0 0 1 778.52656,1233.7264 122.22222,122.22222 0 0 1 656.3,1355.9452 122.22222,122.22222 0 0 1 534.08128,1233.7264 122.22222,122.22222 0 0 1 656.3,1111.5 Z"
+       id="path101"
+       inkscape:connector-curvature="0" /><path
+       inkscape:connector-curvature="0"
+       id="path141"
+       d="m 2427.6,984.9264 a 250,250 0 0 0 -250,250 250,250 0 0 0 250,250 250,250 0 0 0 250,-250 250,250 0 0 0 -250,-250 z m 0,127.7736 A 122.22222,122.22222 0 0 1 2549.8266,1234.9264 122.22222,122.22222 0 0 1 2427.6,1357.1452 122.22222,122.22222 0 0 1 2305.3813,1234.9264 122.22222,122.22222 0 0 1 2427.6,1112.7 Z"
+       style="fill:#3e404d;fill-opacity:1;stroke-width:4" /></g></svg>
