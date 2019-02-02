@@ -123,7 +123,7 @@ class App extends Component {
         <section>
           <h2>Secured by the Blockchain</h2>
 
-          <p>Voter&apos;s Twitter usernames and votes will be recorded publicly on the <a href="https://ethereum.org/">Ethereum</a> blockchain. Once votes are cast they can not be changed or censored by the website owner or any person, govronment, or entity. Please allow 10 minutes for your vote to be saved to to blockchain.</p>
+          <p>Voter&apos;s Twitter usernames and votes will be recorded publicly on the <a href="https://ethereum.org/">Ethereum</a> blockchain. Once votes are cast they can not be changed or censored by the website owner or any person, government, or entity. Please allow 10 minutes for your vote to be saved to to blockchain.</p>
       <div><strong>Contract Address:</strong> <a href="https://etherscan.io/address/0x5843cc6cd40bd45079b72b991a06dfa6ff69a286#readContract">0x5843cc6cd40bd45079b72b991a06dfa6ff69a286</a></div>
       <div><strong>Donation Address:</strong> <a href="https://etherscan.io/address/0x271d0B235C01E352e8a7788769D778b2706bc613">0x271d0B235C01E352e8a7788769D778b2706bc613</a></div>
         </section>
